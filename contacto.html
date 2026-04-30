@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+        <link rel="icon" type="image/png" sizes="32x32" href="favicon.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon.png">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contacto | Nexus Development</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
+}
+
+body{
+    background:#070707;
+    color:white;
+    overflow-x:hidden;
+}
+
+body::before{
+    content:"";
+    position:fixed;
+    inset:0;
+    background:
+        radial-gradient(circle at 20% 20%, rgba(0,140,255,0.15), transparent 30%),
+        radial-gradient(circle at 80% 10%, rgba(255,255,255,0.08), transparent 30%),
+        linear-gradient(180deg, #070707, #0d0d0d);
+    z-index:-1;
+}
+
+/* NAV */
+.navbar{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:18px 40px;
+    background:rgba(5,5,5,0.65);
+    backdrop-filter:blur(14px);
+    border-bottom:1px solid rgba(255,255,255,0.08);
+    position:sticky;
+    top:0;
+    z-index:20;
+}
+
+.brand{
+    display:flex;
+    align-items:center;
+    gap:12px;
+    font-weight:bold;
+}
+
+.brand img{
+    width:46px;
+}
+
+.nav-links a{
+    margin-left:24px;
+    text-decoration:none;
+    color:#aaa;
+    transition:0.3s;
+}
+
+.nav-links a:hover{
+    color:#4da6ff;
+}
+
+/* CONTENEDOR */
+.container{
+    max-width:1100px;
+    margin:80px auto;
+    padding:40px;
+    display:flex;
+    gap:60px;
+    align-items:center;
+    animation:fadeIn 1s ease;
+}
+
+/* FOTO */
+.profile-img{
+    width:320px;
+    border-radius:20px;
+    box-shadow:0 0 40px rgba(77,166,255,0.3);
+    transition:0.4s;
+}
+
+.profile-img:hover{
+    transform:scale(1.03);
+    box-shadow:0 0 60px rgba(77,166,255,0.5);
+}
+
+/* BIO */
+.bio{
+    max-width:600px;
+}
+
+.bio h1{
+    font-size:42px;
+    margin-bottom:15px;
+    background:linear-gradient(90deg,#ffffff,#4da6ff);
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
+}
+
+/* IDIOMAS */
+.lang-block{
+    margin-bottom:25px;
+    padding-left:14px;
+    border-left:2px solid rgba(77,166,255,0.3);
+}
+
+.lang-title{
+    display:block;
+    font-size:12px;
+    letter-spacing:1px;
+    color:#4da6ff;
+    margin-bottom:10px;
+    font-weight:bold;
+}
+
+/* TEXTO */
+.bio p{
+    color:#bdbdbd;
+    line-height:1.7;
+}
+
+/* BOTONES */
+.links{
+    display:flex;
+    gap:12px;
+    flex-wrap:wrap;
+    margin-top:20px;
+}
+
+.btn{
+    display:flex;
+    align-items:center;
+    gap:8px;
+    padding:10px 16px;
+    border-radius:10px;
+    text-decoration:none;
+    font-weight:500;
+    font-size:14px;
+    transition:0.25s;
+    background:rgba(255,255,255,0.05);
+    border:1px solid rgba(255,255,255,0.1);
+    backdrop-filter:blur(10px);
+}
+
+.btn img{
+    width:18px;
+    opacity:0.85;
+}
+
+.discord{
+    color:#cfd7ff;
+}
+
+.discord:hover{
+    background:rgba(88,101,242,0.15);
+    border-color:#5865F2;
+}
+
+.instagram{
+    color:#ffd6e3;
+}
+
+.instagram:hover{
+    background:rgba(255,60,120,0.15);
+    border-color:#ff3c78;
+}
+
+/* INFO */
+.info{
+    margin-top:20px;
+}
+
+.flag{
+    width:26px;
+    vertical-align:middle;
+    margin-right:8px;
+}
+
+.languages span{
+    display:inline-block;
+    margin-right:10px;
+    margin-top:10px;
+    padding:6px 10px;
+    border-radius:999px;
+    background:rgba(77,166,255,0.15);
+    border:1px solid rgba(255,255,255,0.1);
+}
+
+/* ANIMACIÓN */
+@keyframes fadeIn{
+    from{opacity:0; transform:translateY(30px);}
+    to{opacity:1; transform:translateY(0);}
+}
+
+/* RESPONSIVE */
+@media(max-width:900px){
+    .container{
+        flex-direction:column;
+        text-align:center;
+        gap:30px;
+    }
+
+    .profile-img{
+        width:220px;
+    }
+
+    .bio h1{
+        font-size:32px;
+    }
+
+    .links{
+        justify-content:center;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header class="navbar">
+    <div class="brand">
+        <img src="logo.png">
+        <span>Nexus Development</span>
+    </div>
+
+    <nav class="nav-links">
+        <a href="index.html">Inicio</a>
+        <a href="contacto.html">Contacto</a>
+    </nav>
+</header>
+
+<section class="container">
+
+    <img src="strangxr.jpg" class="profile-img">
+
+    <div class="bio">
+        <h1>Santiago</h1>
+
+        <!-- ENGLISH -->
+        <div class="lang-block">
+            <span class="lang-title">ENGLISH</span>
+            <p>
+            I am a software development engineering student from Mexico, focused on building high-quality systems and interactive digital experiences. I specialize in Roblox game development, creating optimized systems, mechanics, and user interfaces designed for performance and scalability.
+            <br><br>
+            I also develop modern and responsive websites for businesses and brands, combining clean UI/UX design with solid functionality. My goal is to deliver professional, scalable, and visually polished digital solutions.
+            </p>
+        </div>
+
+        <!-- ESPAÑOL -->
+        <div class="lang-block">
+            <span class="lang-title">ESPAÑOL</span>
+            <p>
+            Soy estudiante de ingeniería en desarrollo de software en México, enfocado en la creación de sistemas de alta calidad y experiencias digitales interactivas. Me especializo en el desarrollo de videojuegos en Roblox, creando sistemas optimizados, mecánicas y interfaces enfocadas en rendimiento.
+            <br><br>
+            También desarrollo páginas web modernas y responsivas para negocios y marcas, combinando diseño profesional con funcionalidad sólida para ofrecer soluciones completas.
+            </p>
+        </div>
+
+        <div class="links">
+            <a href="https://discord.gg/bUehasdbqJ" target="_blank" class="btn discord">
+                <img src="https://cdn-icons-png.flaticon.com/512/5968/5968756.png">
+                Discord
+            </a>
+
+            <a href="https://www.instagram.com/arcossx_.18/" target="_blank" class="btn instagram">
+                <img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png">
+                Instagram
+            </a>
+        </div>
+
+        <div class="info">
+            <p>
+                <img src="https://flagcdn.com/w40/mx.png" class="flag">
+                Mexico
+            </p>
+
+            <div class="languages">
+                <span>English</span>
+                <span>Español</span>
+            </div>
+        </div>
+
+    </div>
+
+</section>
+
+</body>
+</html>
